@@ -5,17 +5,13 @@
 ---
 
 ## Snapshot  
-
+| Item | Summary |
+|------|----------|
 | **Domain** | `JGCyber.net` |
-
 | **Server** | DC01 – Windows Server 2022 |
-
 | **Focus** | GUI-based Active Directory configuration |
-
 | **Result** | Fully functional domain controller with DNS, OUs, users, and GPOs |
-
 | **Tools** | Server Manager, ADUC, ADAC, DNS Manager, GPMC |
-
 
 ---
 
