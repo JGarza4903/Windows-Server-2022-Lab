@@ -43,7 +43,7 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-\## Highlights  
+## Highlights  
 - `assets/images/01-server-baseline.png` – Server setup  
 - `assets/images/03-domain-promotion.png` – Domain promotion summary  
 - `assets/images/05-ou-structure.png` – Organizational Units layout  
@@ -54,12 +54,12 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-\## Key Takeaways  
+## Key Takeaways  
 
-- Learned how \*\*DNS and AD DS\*\* rely on each other for domain functionality.  
-- Practiced \*\*OU design and group-based role assignment\*\* using AGDLP principles.  
-- Gained foundational understanding of \*\*Group Policy management\*\* and inheritance.  
-- Reinforced the importance of \*\*clean documentation\*\* and verification.  
+- Learned how **DNS and AD DS** rely on each other for domain functionality.  
+- Practiced **OU design and group-based role assignment** using AGDLP principles.  
+- Gained foundational understanding of **Group Policy management** and inheritance.  
+- Reinforced the importance of **clean documentation** and verification.  
 
 ---
 
