@@ -27,5 +27,3 @@ New Static IPv4: 192.168.20.5
 
 
 
-update
-
