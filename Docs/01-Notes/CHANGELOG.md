@@ -15,3 +15,17 @@ DHCP Server:10.0.2.2
 
 Default Gateway: 10.0.2.2
 
+
+
+DSRM: Jakobi1010!
+
+
+
+New Name: DC01
+
+New Static IPv4: 192.168.20.5
+
+
+
+update
+
