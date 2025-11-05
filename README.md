@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 Snapshot  
-=======
+
 ## Snapshot  
 | Item | Summary |
 |------|----------|
