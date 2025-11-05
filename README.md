@@ -4,11 +4,9 @@
 
 ---
 
-<<<<<<< HEAD
 ## 🚀 Snapshot  
 =======
 ## Snapshot  
->>>>>>> 4431688800ef46b320d844fbe69ab574183154f7
 | Item | Summary |
 |------|----------|
 | **Domain** | `JGCyber.net` |
