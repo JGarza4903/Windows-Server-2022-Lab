@@ -1,26 +1,6 @@
-\# Enterprise AD DS Build   
+\# 🧬 Enterprise Active Directory Lab  
 
-\*Windows Server 2022\*  
-
-
-
----
-
-
-
-\## Overview
-
-\*\*Project Goal:\*\*  
-
-Build a fully functional Windows Server 2022 Active Directory Domain Services (AD DS) environment \*\*entirely through the GUI\*\*, documenting every stage with screenshots and brief explanations.  
-
-
-
-\*\*Scope:\*\*  
-
-This project focuses on learning the logical flow of an enterprise domain setup — understanding the “why” behind each step before automating it in later PowerShell-based projects.  
-
-PowerShell was used \*\*only to verify network configuration\*\* using `ipconfig /all` before and after the build. However, I will be recreating this environment using only PowerShell in due time.
+\*Windows Server 2022 · GUI-First Build · Joshua Garza\*
 
 
 
@@ -28,51 +8,21 @@ PowerShell was used \*\*only to verify network configuration\*\* using `ipconfig
 
 
 
-\## Phase 1 – Lab Setup  
+\## 🚀 Snapshot  
 
-\*\*Objective:\*\* Establish a clean, ready-to-configure Windows Server 2022 environment.  
+| Item | Summary |
 
+|------|----------|
 
+| \*\*Domain\*\* | `JGCyber.net` |
 
-\### Actions
+| \*\*Server\*\* | DC01 – Windows Server 2022 |
 
-\- Verified that Windows Server 2022 booted to \*\*Server Manager\*\* with no roles installed.  
+| \*\*Focus\*\* | GUI-based Active Directory configuration |
 
-\- Installed available updates and confirmed the system time zone was correct.  
+| \*\*Result\*\* | Fully functional domain controller with DNS, OUs, users, and GPOs |
 
-\- Created a local project folder structure for organization:  
-
-
-
-Windows-Server-2022-Lab
-
-├─ Docs/				(Explanations and Documentation of procedural steps)
-
-├─ Images/			(Database for all images screenshotted)
-
-└─ README.md			(Overview of the project)
-
-
-
-\- Captured baseline screenshots of Server Manager and Device Manager.  
-
-\- Ran `ipconfig /all` in PowerShell and saved the output for reference.
-
-
-
-\*\*Evidence:\*\*  
-
-\- `exports/ipconfig-before.txt`  
-
-\- `assets/images/00-server-manager-baseline.png`
-
-
-
-\*\*Notes:\*\*  
-
-This first snapshot captures the system in its clean, unconfigured state.  
-
-It provides a starting point for comparison as each role and setting is applied later.
+| \*\*Tools\*\* | Server Manager, ADUC, ADAC, DNS Manager, GPMC |
 
 
 
@@ -80,49 +30,15 @@ It provides a starting point for comparison as each role and setting is applied 
 
 
 
-\## Phase 2 – Server Baseline Configuration  
+\## 🧩 Overview  
 
-\*\*Objective:\*\* Rename the server, assign a static IP address, and verify connectivity.  
+This lab demonstrates the setup of an enterprise-style Active Directory domain in \*\*Windows Server 2022\*\*, using only GUI tools.  
 
-
-
-\### Actions
-
-\- Opened \*\*Server Manager → Local Server → Computer Name\*\* and changed the name to `DC01`.  
-
-\- Rebooted the system to apply changes.  
-
-\- Opened \*\*Network Connections → Ethernet → Properties → IPv4 Settings\*\* and configured:  
+The objective was to learn the relationships between \*\*DNS, OUs, user management, and Group Policy\*\* before automating these processes with PowerShell in later projects.  
 
 
 
-IP Address: 192.168.20.5
-
-Subnet Mask: 255.255.255.0
-
-Default Gateway: (blank)
-
-Preferred DNS: 127.0.0.1
-
-
-
-\- Verified the configuration using PowerShell:
-
-
-
-ipconfig /all
-
-
-
-\- Took screenshots of the NIC settings and Server Manager showing updated name and IP.
-
-
-
-\*\*Evidence:\*\*
-
-\- `exports/ipconfig-before.txt`
-
-\- `assets/images/00-server-manager-baseline.png`
+Each configuration step was verified with screenshots and summarized below.
 
 
 
@@ -130,39 +46,31 @@ ipconfig /all
 
 
 
-\## ⚙️ Phase 3 – Installing AD DS and DNS Roles  
+\## 🧭 Build Summary  
 
 
 
-\*\*Objective:\*\* Use \*\*Server Manager\*\* to install the core roles required for Active Directory Domain Services (AD DS) and DNS.
+| Phase | Task | Outcome |
 
+|-------|------|----------|
 
+| 1 | Server prep and baseline configuration | Clean Windows Server 2022 install documented |
 
----
+| 2 | Static IP and rename | Configured `192.168.20.5` and renamed host to `DC01` |
 
+| 3 | Installed AD DS, DNS, GPMC | Core roles installed and verified via Server Manager |
 
+| 4 | Promoted to Domain Controller | Created new forest `JGCyber.net` |
 
-\### Actions  
+| 5 | Verified AD DS \& DNS | Confirmed services and DNS zones functioning |
 
-\- Opened \*\*Server Manager\*\* from the Start menu.  
+| 6 | Built OU structure | Created departments and resource OUs |
 
-\- Selected \*\*Manage → Add Roles and Features\*\* to launch the installation wizard.  
+| 7 | Added users \& groups | Created template and security groups in Sales OU |
 
-\- Chose \*\*Role-based or feature-based installation\*\*, then selected the local server (`DC01`).  
+| 8 | Configured GPO baseline | Enforced password and lockout policies |
 
-\- From the server roles list, selected:
-
-&nbsp;  -  \*\*Active Directory Domain Services (AD DS)\*\*  
-
-&nbsp;  -  \*\*DNS Server\*\*  
-
-&nbsp;  -  \*\*Group Policy Management\*\*  
-
-\- Left all other options at their defaults and clicked \*\*Install\*\*.  
-
-\- Waited for the installation to complete and confirmed success in the \*\*Results\*\* window.  
-
-\- Verified completion via the yellow notification flag in Server Manager, which indicated that post-deployment configuration (domain promotion) was required.
+| 9 | Domain-joined client | Validated login and policy application |
 
 
 
@@ -170,23 +78,21 @@ ipconfig /all
 
 
 
-\### 📸 Evidence Collected  
+\## 📸 Highlights  
 
-\- `assets/images/02-role-install-summary.png` – Installation summary screen  
+\- `assets/images/01-server-baseline.png` – Server setup  
 
-\- `assets/images/02-server-manager-notification.png` – Server Manager AD DS configuration prompt  
+\- `assets/images/03-domain-promotion.png` – Domain promotion summary  
+
+\- `assets/images/05-ou-structure.png` – Organizational Units layout  
+
+\- `assets/images/06-users-groups.png` – User and group configuration  
+
+\- `assets/images/07-gpo-baseline.png` – GPO configuration view  
 
 
 
----
-
-
-
-\### Notes 
-
-This phase establishes the server’s identity and management foundation.  
-
-Installing \*\*Active Directory Domain Services\*\*, \*\*DNS\*\*, and \*\*Group Policy Management\*\* provides the backbone for user authentication, name resolution, and centralized policy enforcement.  
+\*(All evidence available in the `/assets/images/` folder.)\*
 
 
 
@@ -194,45 +100,15 @@ Installing \*\*Active Directory Domain Services\*\*, \*\*DNS\*\*, and \*\*Group 
 
 
 
-\## Phase 4 – Domain Promotion  
+\## 🧠 Key Takeaways  
 
-\*\*Objective:\*\* Promote `DC01` to a domain controller and create a new Active Directory forest named `JGCyber.net`.  
+\- Learned how \*\*DNS and AD DS\*\* rely on each other for domain functionality.  
 
+\- Practiced \*\*OU design and group-based role assignment\*\* using AGDLP principles.  
 
+\- Gained foundational understanding of \*\*Group Policy management\*\* and inheritance.  
 
----
-
-
-
-\### Actions  
-
-\- In \*\*Server Manager\*\*, clicked the yellow notification flag and selected \*\*Promote this server to a domain controller\*\*.  
-
-\- Chose \*\*Add a new forest\*\* and entered the root domain name:  
-
-&nbsp; `JGCyber.net`  
-
-\- Left the default options selected for \*\*DNS Server\*\* and \*\*Global Catalog (GC)\*\* roles.  
-
-\- Entered and confirmed a \*\*Directory Services Restore Mode (DSRM)\*\* password. (Store this password offline for better security.)  
-
-\- Accepted the default paths for \*\*Database\*\*, \*\*Log files\*\*, and \*\*SYSVOL\*\*:  
-
-
-
-C:\\Windows\\NTDS
-
-C:\\Windows\\NTDS
-
-C:\\Windows\\SYSVOL
-
-
-
-
-
-\- Clicked \*\*Next\*\* through the prerequisite check summary and verified all checks passed successfully.  
-
-\- Selected \*\*Install\*\*, allowing the server to automatically reboot after promotion.  
+\- Reinforced the importance of \*\*clean documentation\*\* and verification.  
 
 
 
@@ -240,27 +116,13 @@ C:\\Windows\\SYSVOL
 
 
 
-\### 📸 Evidence Collected  
+\## 🔮 Next Steps  
 
-\- `assets/images/03-domain-promotion-summary.png` – Summary screen before installation  
+\- Rebuild this environment entirely through \*\*PowerShell automation\*\*.  
 
-\- `assets/images/03-domain-promotion-success.png` – Confirmation of successful promotion  
+\- Add a \*\*secondary DC\*\* and \*\*pfSense firewall\*\* for multi-network simulation.  
 
-\- `assets/images/03-server-manager-post-reboot.png` – Server Manager dashboard showing new domain  
-
-
-
----
-
-
-
-\### Notes  
-
-This phase created the new \*\*forest root domain\*\* `JGCyber.net`, transforming the standalone server into a \*\*domain controller\*\*.  
-
-DNS integration was automatically configured during the promotion process, ensuring that the server can resolve its own AD-integrated records.  
-
-After reboot, all core domain services were verified as healthy, marking the successful establishment of the Active Directory environment.
+\- Integrate \*\*AD CS (Certificate Services)\*\* and security auditing.
 
 
 
@@ -268,59 +130,17 @@ After reboot, all core domain services were verified as healthy, marking the suc
 
 
 
-\## 🧭 Phase 5 – Post-Promotion Verification  
+\## 🧾 Credits  
 
-\*\*Objective:\*\* Verify that Active Directory Domain Services (AD DS) and DNS are properly installed, configured, and operational after promoting the server to the domain `JGCyber.net`.  
+\*\*Author:\*\* Joshua Garza  
 
+\*\*Program:\*\* AAS – Network Administration \& Cybersecurity (PCC)  
 
-
----
-
-
-
-\### Actions  
-
-\- After reboot, logged into `DC01` using the domain administrator account (`JGCyber\\Administrator`).  
-
-\- Opened \*\*Server Manager\*\* to confirm the following roles were listed under “Roles and Features”:  
-
-&nbsp; - \*\*Active Directory Domain Services\*\*  
-
-&nbsp; - \*\*DNS Server\*\*  
-
-&nbsp; - \*\*Group Policy Management\*\*  
-
-\- Opened \*\*Active Directory Users and Computers (ADUC)\*\* to confirm the new domain structure was visible under:  
-
-&nbsp; `JGCyber.net`  
-
-&nbsp; Default containers observed:  
-
-&nbsp; - Builtin  
-
-&nbsp; - Computers  
-
-&nbsp; - Domain Controllers  
-
-&nbsp; - Users  
-
-\- Opened \*\*DNS Manager\*\* and verified that the \*\*Forward Lookup Zone\*\* for `JGCyber.net` was automatically created.  
-
-&nbsp; - Confirmed the presence of \*\*A\*\*, \*\*SOA\*\*, and \*\*SRV\*\* records for `DC01`.  
-
-\- Verified that \*\*Netlogon\*\* and \*\*ADWS (Active Directory Web Services)\*\* services were running.  
-
-\- Opened \*\*PowerShell\*\* and ran "ipconfig /all" to confirm the following:
+\*\*License:\*\* \[MIT License](LICENSE)  
 
 
 
-Primary DNS Suffix: JGCyber.net
+\*Part of my professional portfolio demonstrating real-world Windows Server administration skills.\*  
 
 
-
-DNS Servers: 127.0.0.1
-
-
-
-Captured screenshots of ADUC and DNS Manager showing the active domain and functional DNS zone.
 
