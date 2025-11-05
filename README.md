@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Snapshot  
+## Snapshot  
 
 ## Snapshot  
 | Item | Summary |
@@ -52,7 +52,7 @@ Each configuration step was verified with screenshots and summarized below.
 - `assets/images/06-users-groups.png` – User and group configuration  
 - `assets/images/07-gpo-baseline.png` – GPO configuration view  
 
-*(All evidence available in the `/assets/images/` folder.)*
+*(All evidence available in the `Images/` folder.)*
 
 ---
 
