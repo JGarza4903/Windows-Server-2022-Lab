@@ -1,14 +1,10 @@
-# 🧬 Enterprise Active Directory Lab  
+# Enterprise Active Directory Lab  
 
 *Windows Server 2022*
 
 ---
 
-## 🚀 Snapshot  
-
-| Item | Summary |
-
-|------|----------|
+## Snapshot  
 
 | **Domain** | `JGCyber.net` |
 
@@ -24,7 +20,7 @@
 ---
 
 
-## 🧩 Overview  
+## Overview  
 
 This lab demonstrates the setup of an enterprise-style Active Directory domain in **Windows Server 2022**, using only GUI tools.  
 
@@ -36,7 +32,7 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-## 🧭 Build Summary  
+## Build Summary  
 
 
 | Phase | Task | Outcome |
@@ -63,7 +59,7 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-\## 📸 Highlights  
+\## Highlights  
 
 - `assets/images/01-server-baseline.png` – Server setup  
 
@@ -79,7 +75,7 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-\## 🧠 Key Takeaways  
+\## Key Takeaways  
 
 - Learned how \*\*DNS and AD DS\*\* rely on each other for domain functionality.  
 
@@ -91,24 +87,11 @@ Each configuration step was verified with screenshots and summarized below.
 
 ---
 
-## 🔮 Next Steps  
+## Next Steps  
 
 - Rebuild this environment entirely through **PowerShell automation**.  
 
 - Add a **secondary DC** and **pfSense firewall** for multi-network simulation.  
 
 - Integrate **AD CS (Certificate Services)** and security auditing.
-
----
-
-## 🧾 Credits  
-
-**Author:** Joshua Garza  
-
-**Program:** AAS – Network Administration & Cybersecurity (PCC)  
-
-
-*Part of my professional portfolio demonstrating real-world Windows Server administration skills.*  
-
-
 
