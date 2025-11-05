@@ -5,8 +5,6 @@
 ---
 
 ## Snapshot  
-
-## Snapshot  
 | Item | Summary |
 |------|----------|
 | **Domain** | `JGCyber.net` |
