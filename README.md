@@ -7,7 +7,7 @@
 ## Snapshot  
 | Item | Summary |
 |------|----------|
-| **Domain** | `JGCyber.net` |
+| **Domain** | JGCyber.net |
 | **Server** | DC01 – Windows Server 2022 |
 | **Focus** | GUI-based Active Directory configuration |
 | **Result** | Fully functional domain controller with DNS, OUs, users, and GPOs |
@@ -18,7 +18,7 @@
 
 ## Overview  
 
-This lab demonstrates the setup of an enterprise-style Active Directory domain in **Windows Server 2022**, using only GUI tools.  
+This lab demonstrates the setup of an Active Directory domain in **Windows Server 2022**, using only GUI tools.  
 
 The objective was to learn the relationships between **DNS, OUs, user management, and Group Policy** before automating these processes with PowerShell in later projects.  
 
