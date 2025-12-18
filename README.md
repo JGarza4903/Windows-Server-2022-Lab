@@ -88,3 +88,29 @@ Separating role installation from domain promotion allows administrators to vali
 ![Role Confirmation](Images/phase3/02-role_confirmation.png)
 
 </details>
+
+---
+
+<details>
+<summary><strong>Phase 4 – Domain Promotion & Forest Creation</strong></summary>
+
+### Objective
+Create a new Active Directory forest and promote the server to a Domain Controller.
+
+### Actions Taken
+- Created a new forest (`NetLabz.local`)
+- Promoted DC01 to a Domain Controller
+- Installed and verified AD-integrated DNS
+- Verified ADUC and DNS post-promotion
+
+### Why This Matters
+Forest creation defines the security boundary of an Active Directory environment. Proper domain naming, DNS integration, and functional level selection are critical for long-term stability.
+
+### Evidence
+![Installation](Images/phase4/01-domain_promotion.png)
+---
+![ADUC Console](Images/phase4/02-ADUC.png)
+---
+![DNS Zone](Images/phase4/03-DNS.png)
+
+</details>
