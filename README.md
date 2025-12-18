@@ -34,7 +34,7 @@ Establish a clean Windows Server 2022 baseline in a virtualized environment.
   - Resolution: prioritized ISO boot device
 
 ### Evidence
-![Server Install](Images/phase1/server-manager-baseline.png)
+![Server Install](Images/phase1/baseline.png)
 
 </details>
 
@@ -56,6 +56,8 @@ Prepare the server for Active Directory by stabilizing identity and networking.
 Active Directory relies on stable DNS, IP addressing, and time synchronization.
 
 ### Evidence
-![Static IP](Images/phase2/02-static-ip-config.png)
+![Static IP](Images/phase2/02-staticIP.png)
+---
+![ipconfig](Images/phase2/04-ipconfig.png)
 
 </details>
