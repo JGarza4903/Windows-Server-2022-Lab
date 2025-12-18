@@ -65,3 +65,26 @@ Active Directory relies on stable DNS, IP addressing, and time synchronization.
 ![TimeVerification](Images/phase2/time%20verification.png)
 
 </details>
+
+---
+
+<details>
+<summary><strong>Phase 3 – AD DS & DNS Role Installation</strong></summary>
+
+### Objective
+Install Active Directory Domain Services and DNS roles in preparation for domain promotion.
+
+### Actions Taken
+- Installed AD DS role
+- Installed DNS Server role
+- Verified role installation via Server Manager
+
+### Why This Matters
+Separating role installation from domain promotion allows administrators to validate system readiness and reduces the risk of configuration errors during forest creation.
+
+### Evidence
+![AD DS Installed](Images/phase3/01-role_install.png)
+---
+![Role Confirmation](Images/phase3/02-role_confirmation.png)
+
+</details>
