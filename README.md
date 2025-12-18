@@ -59,5 +59,9 @@ Active Directory relies on stable DNS, IP addressing, and time synchronization.
 ![Static IP](Images/phase2/02-staticIP.png)
 ---
 ![ipconfig](Images/phase2/04-ipconfig.png)
+---
+![Verifification](Images/phase2/03-staticIP.png)
+---
+![TimeVerification](Images/phase2/time%20verification.png)
 
 </details>
