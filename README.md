@@ -181,3 +181,47 @@ Screenshots included in this phase document the troubleshooting process, configu
 This phase reinforced the dependency Active Directory has on correct DNS and network configuration. Even with properly created OUs, users, and computer objects, domain operations will fail if fundamental networking requirements are not met.
 
 </details>
+
+---
+
+## 🚧 Project Status – Work in Progress
+
+This environment is actively being expanded to reflect additional real-world Active Directory, systems administration, and security scenarios. The foundation is complete, and future phases will build directly on the existing domain, users, groups, and client systems already in place.
+
+Rather than restarting or restructuring the lab, upcoming work will focus on layering functionality, tightening controls, and introducing realistic operational challenges.
+
+---
+
+## 🔜 Planned Next Phases
+
+### Phase 6 – File Services & Permissions
+- Implement file shares based on departmental structure
+- Apply NTFS and share permissions using security groups
+- Validate access control from domain-joined client systems
+- Document permission inheritance and troubleshooting 
+
+---
+
+### Phase 7 – Group Policy Implementation
+- Create and link GPOs at the OU level
+- Enforce basic security and workstation policies
+- Test policy application and results on client machines
+- Troubleshoot policy precedence and inheritance
+
+---
+
+### Phase 8 – Authentication, Access, and Hardening
+- Review authentication flow (DNS, Kerberos, domain logons)
+- Apply baseline hardening where appropriate
+- Introduce intentional misconfigurations to test troubleshooting skills
+- Document security considerations and lessons learned
+
+---
+
+## 📌 Ongoing Goals
+- Continue documenting both successes and failures
+- Prioritize realism over perfection
+- Maintain clear evidence of configuration, validation, and troubleshooting
+- Evolve the lab without unnecessary redesign or scope resets
+
+This project is intended to grow alongside hands-on experience and learning, mirroring how real environments are improved over time rather than built all at once.
