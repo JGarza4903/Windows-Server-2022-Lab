@@ -143,6 +143,7 @@ Simulate real-world Active Directory administration by structuring Organizationa
 During the domain join process, the client system was unable to contact the Domain Controller, resulting in a domain connectivity error.
 
 Initial review suggested the domain name and credentials were correct, and the computer object already existed in Active Directory. However, the join process consistently failed.
+
 ---
 ![error](Images/phase5/troubleshoot1.png)
 
@@ -171,6 +172,7 @@ These misconfigurations prevented the client from locating the Domain Controller
 - Re-attempted the domain join using domain administrator credentials
 
 After correcting the network configuration, the client successfully joined the domain and automatically associated with the pre-staged computer object in Active Directory.
+
 ---
 ![Resolution](Images/phase5/troubleshoot4.png)
 
@@ -183,6 +185,7 @@ After correcting the network configuration, the client successfully joined the d
 - User group memberships reflect intended access design
 
 Screenshots included in this phase document the troubleshooting process, configuration changes, and successful domain join.
+
 ---
 ![Verification](Images/phase5/08-confirmation.png)
 
