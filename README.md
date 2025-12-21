@@ -38,7 +38,7 @@ Rather than following a scripted tutorial, this lab emphasizes **decision-making
 - **Virtualization Platform:** Hyper-V  
 - **Domain Name:** `NetLabz.local`  
 - **Topology:** Single-domain, single-domain controller environment (expanding)  
-- **Client Systems:** Windows 11  
+- **Client Systems:** Windows 11, Windows 10
 
 ---
 
