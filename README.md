@@ -36,7 +36,7 @@ Rather than following a scripted tutorial, this lab emphasizes **decision-making
 
 ## Environment Summary
 - **Virtualization Platform:** Hyper-V  
-- **Domain Name:** `JG-Cyber.net`  
+- **Domain Name:** `NetLabz.local`  
 - **Topology:** Single-domain, single-domain controller environment (expanding)  
 - **Client Systems:** Windows 11  
 
