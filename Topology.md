@@ -6,23 +6,19 @@ Objects are organized by Organizational Unit (OU) and categorized into **Users, 
 ---
 
 ## Domain Controllers OU
-
 **Distinguished Name:**  
 `OU=Domain Controllers,DC=NetLabz,DC=local`
 
 ### Users
 - None
-
 ### Computers
 - DC01
-
 ### Groups
 - None
 
 ---
 
 ## Human Resources OU
-
 **Distinguished Name:**  
 `OU=Human Resources OU,DC=NetLabz,DC=local`
 
@@ -30,10 +26,8 @@ Objects are organized by Organizational Unit (OU) and categorized into **Users, 
 - HR User Template  
 - Paige Turner  
 - Willie Makit  
-
 ### Computers
 - None
-
 ### Groups
 - HR_Administration  
 - HR_Employees  
@@ -41,19 +35,15 @@ Objects are organized by Organizational Unit (OU) and categorized into **Users, 
 ---
 
 ## Production OU
-
 **Distinguished Name:**  
 `OU=Production OU,DC=NetLabz,DC=local`
-
 ### Users
 - Billy Bob  
 - Janet Jackson  
 - Jerry Seinfeld  
 - ProductionUser Template  
-
 ### Computers
 - None
-
 ### Groups
 - ProductionEmployees  
 - ProductionManagers  
@@ -61,7 +51,6 @@ Objects are organized by Organizational Unit (OU) and categorized into **Users, 
 ---
 
 ## Research OU
-
 **Distinguished Name:**  
 `OU=Research OU,DC=NetLabz,DC=local`
 
@@ -69,11 +58,9 @@ Objects are organized by Organizational Unit (OU) and categorized into **Users, 
 - Bill Nye  
 - Nikola Tesla  
 - RES_User Template  
-
 ### Computers
 - RES-COMP-01  
 - RES-COMP-02  
-
 ### Groups
 - Research_Employees  
 - Research_Managers  
