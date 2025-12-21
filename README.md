@@ -1,19 +1,44 @@
-# Windows Server 2022 – Enterprise Domain Lab
+# Windows Server 2022 Enterprise Lab
 
-## Quick Snapshot
-- Hyper-V based Windows Server 2022 lab
-- Single-domain Active Directory environment
-- Focused on enterprise fundamentals and troubleshooting
-- Built and documented for entry-level IT roles
+**Project Type:** Infrastructure & Identity Management  
+**Status:** Active / Expanding  
+**Focus Areas:** System Administration · Active Directory · Networking · Security Foundations  
 
 ---
 
-## Skills Demonstrated
-- Windows Server administration
-- Active Directory & DNS fundamentals
-- Virtualization with Hyper-V
-- Network configuration & troubleshooting
-- Technical documentation
+## Overview
+This repository documents the design, deployment, and validation of a **Windows Server 2022 enterprise-style domain environment** built using **Hyper-V virtualization**. This project simulates a small but realistic organizational network to demonstrate hands-on experience with **identity services, name resolution, domain authentication, and client integration**.
+
+Rather than following a scripted tutorial, this lab emphasizes **decision-making, troubleshooting, and operational reasoning**—the same skills required in entry-level system administration and security-focused IT roles.
+
+---
+
+## Technologies & Tools
+- Windows Server 2022  
+- Active Directory Domain Services (AD DS)  
+- DHCP
+- DNS  
+- Hyper-V  
+- Windows 11 Client  
+- TCP/IP Networking  
+- PowerShell (light usage, expanding)  
+
+---
+
+## Project Objectives
+- Deploy and configure a stable Windows Server 2022 domain controller  
+- Implement Active Directory and DNS to support centralized authentication  
+- Join client systems to the domain and validate authentication flow  
+- Identify and resolve real-world configuration issues (DNS, networking, name resolution)  
+- Document outcomes with evidence and technical reasoning  
+
+---
+
+## Environment Summary
+- **Virtualization Platform:** Hyper-V  
+- **Domain Name:** `JG-Cyber.net`  
+- **Topology:** Single-domain, single-domain controller environment (expanding)  
+- **Client Systems:** Windows 11  
 
 ---
 
