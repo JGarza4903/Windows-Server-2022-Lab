@@ -231,6 +231,78 @@ Rather than restarting or restructuring the lab, upcoming work will focus on lay
 
 ---
 
+<details>
+<summary><strong>Phase 6 – File Server Configuration & Permission Enforcement</strong></summary>
+
+### Objective
+Configure a centralized file server using Active Directory security groups and NTFS permissions, then validate access control from a domain-joined Windows 11 client.
+
+---
+
+### Implementation Steps
+- Created a centralized directory structure:
+  - `C:\Shared_Folder`
+- Created department-specific folders:
+  - `HR_Shared`
+  - `Production_Shared`
+  - `Research_Shared`
+- Enabled a network path via **Advanced Sharing** for each department folder
+- Assigned **share permissions** using domain security groups (e.g  `HR_Employees`)
+- Configured **NTFS permissions** to allow least-priviledge access ONLY
+- Disabled NTFS inheritance on department folders to enforce explicit permissions
+- Re-applied required permissions after inheritance removal:
+  - `Administrators` – Full Control
+  - `SYSTEM` – Full Control
+  - Department security group – Modify
+- Verified access using a User from HR department group and verified Denial from Production user group.
+
+---
+
+### Troubleshooting & Observations
+- Disabling NTFS inheritance removed all inherited permissions, temporarily locking access to the folder
+- Ownership had to be confirmed before explicit permissions could be added
+- Permission controls were initially greyed out until ownership and inheritance were corrected
+- Share permissions alone were not sufficient; NTFS permissions also needed to explicitly allow access
+- Access failures highlighted that the **most restrictive permission always applies**
+- During testing, the user account also required membership in **Remote Desktop Users** for successful validation in this scenario
+
+---
+
+### Validation
+- Logged in as a domain user from `Win11_RES-COMP-01`
+- Successfully accessed `\\DC01\HR_Shared`
+- Created a test folder to confirm write permissions
+- Verified access denial for users not in the assigned security group
+
+---
+
+### Importance
+File servers rely on precise permission layering. This phase demonstrates how Active Directory group design, share permissions, and NTFS permissions must align to securely control access. Misconfigurations at any layer can result in unexpected access failures or security exposure.
+
+---
+
+### Evidence
+![Shared Folder Creation](Images/phase6/01-shared_folder_creation.png)
+---
+![Advanced Sharing Configuration](Images/phase6/02-folder-config.png)
+---
+![Network Path Validation](Images/phase6/03-network_path.png)
+---
+![NTFS Permission Configuration](Images/phase6/04-ntfs-config1.png)
+---
+![Inheritance Disabled](Images/phase6/05-disable-inheritance.png)
+---
+![Explicit Permissions Applied](Images/phase6/06-explicit_permission.png)
+---
+![Client Access Test](Images/phase6/09-paigeTurner_file_creation.png)
+---
+![Access Denied Proof](Images/phase6/10-denial_proof.png)
+
+</details>
+
+---
+
+
 ## Planned Next Phases
 
 ### Phase 6 – File Services & Permissions
