@@ -223,21 +223,11 @@ This phase reinforced the dependency Active Directory has on correct DNS and net
 
 ---
 
-## 🚧 Project Status – Work in Progress
-
-This environment is actively being expanded to reflect additional real-world Active Directory, systems administration, and security scenarios. The foundation is complete, and future phases will build directly on the existing domain, users, groups, and client systems already in place.
-
-Rather than restarting or restructuring the lab, upcoming work will focus on layering functionality, tightening controls, and introducing realistic operational challenges.
-
----
-
 <details>
 <summary><strong>Phase 6 – File Server Configuration & Permission Enforcement</strong></summary>
 
 ### Objective
 Configure a centralized file server using Active Directory security groups and NTFS permissions, then validate access control from a domain-joined Windows 11 client.
-
----
 
 ### Implementation Steps
 - Created a centralized directory structure:
@@ -264,7 +254,8 @@ Configure a centralized file server using Active Directory security groups and N
 - Permission controls were initially greyed out until ownership and inheritance were corrected
 - Share permissions alone were not sufficient; NTFS permissions also needed to explicitly allow access
 - Access failures highlighted that the **most restrictive permission always applies**
-- During testing, the user account also required membership in **Remote Desktop Users** for successful validation in this scenario
+- During testing, the user account also required membership in **Remote Desktop Users** for successful validation in this scenario.
+![Remote Desktop User Group Added](Images/phase6/08-troubleshoot1.png)
 
 ---
 
@@ -302,16 +293,15 @@ File servers rely on precise permission layering. This phase demonstrates how Ac
 
 ---
 
+## 🚧 Project Status – Work in Progress
 
-## Planned Next Phases
+This environment is actively being expanded to reflect additional real-world Active Directory, systems administration, and security scenarios. The foundation is complete, and future phases will build directly on the existing domain, users, groups, and client systems already in place.
 
-### Phase 6 – File Services & Permissions
-- Implement file shares based on departmental structure
-- Apply NTFS and share permissions using security groups
-- Validate access control from domain-joined client systems
-- Document permission inheritance and troubleshooting 
+Rather than restarting or restructuring the lab, upcoming work will focus on layering functionality, tightening controls, and introducing realistic operational challenges.
 
 ---
+
+## Planned Next Phases
 
 ### Phase 7 – Group Policy Implementation
 - Create and link GPOs at the OU level
@@ -334,5 +324,3 @@ File servers rely on precise permission layering. This phase demonstrates how Ac
 - Prioritize realism over perfection
 - Maintain clear evidence of configuration, validation, and troubleshooting
 - Evolve the lab without unnecessary redesign or scope resets
-
-This project is intended to grow alongside hands-on experience and learning, mirroring how real environments are improved over time rather than built all at once.
