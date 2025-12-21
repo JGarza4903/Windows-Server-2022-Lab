@@ -1,6 +1,7 @@
 # Active Directory Topology Overview
 
 This document provides a snapshot of the current **Active Directory logical topology** for the `NetLabz.local` domain.  
+
 Objects are organized by Organizational Unit (OU) and categorized into **Users, Computers, and Groups** to reflect the present state of the environment.
 
 ---
