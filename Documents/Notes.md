@@ -112,7 +112,26 @@ Phase 5: create OUs, users, groups, and start simulating real IT work.
 ---
 
 ## Future Phases (Rough Plan)
+--NEW--05/19/206--
 
+
+**Planned Tasks:**
+- Create and link GPOs at the OU level
+- Enforce password policies, screen lock, and account lockout thresholds
+- Restrict access to Control Panel and removable media for standard users
+- Test GPO inheritance, precedence, and filtering
+- Use `gpresult` and `rsop.msc` to validate applied policies
+- Document policy conflicts and resolution steps
+
+> **Steps to Implement:**
+> 1. Open **Group Policy Management** (`gpmc.msc`) on DC01
+> 2. Right-click an OU (e.g., `Human Resources OU`) → **Create a GPO in this domain and link it here**
+> 3. Name it (e.g., `HR_SecurityBaseline`)
+> 4. Right-click the new GPO → **Edit**
+> 5. Navigate to `Computer Configuration > Policies > Windows Settings > Security Settings` to configure account and audit policies
+> 6. On a domain client, run `gpupdate /force` then `gpresult /r` to verify the policy was applied
+
+--OLD --
 ### Phase 5 — Active Directory Structure & Users
 - Create OUs (Servers, Workstations, Users, Groups)
 - Create test users and security groups
