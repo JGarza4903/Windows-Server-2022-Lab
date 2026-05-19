@@ -342,8 +342,6 @@ A summary of real issues encountered and resolved throughout this lab.
 
 ## What I Would Do Differently
 
-Honest reflection improves both the lab and your credibility with recruiters.
-
 - **Capture evidence before fixing issues** — Phase 5's DNS mismatch was fixed before a screenshot was taken. Going forward, I document *before* making changes.
 - **Expand PowerShell usage earlier** — Manual GUI configuration works, but automating user creation and OU structure with PowerShell would demonstrate scripting fundamentals and scale better in real environments.
 - **Use DHCP from the start** — The lab currently uses static addressing throughout. Adding a DHCP scope would reflect how most enterprise environments actually function.
