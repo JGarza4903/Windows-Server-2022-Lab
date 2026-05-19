@@ -285,14 +285,6 @@ Share permissions and NTFS permissions are independent layers. The most restrict
 - Use `gpresult` and `rsop.msc` to validate applied policies
 - Document policy conflicts and resolution steps
 
-> **Steps to Implement:**
-> 1. Open **Group Policy Management** (`gpmc.msc`) on DC01
-> 2. Right-click an OU (e.g., `Human Resources OU`) → **Create a GPO in this domain and link it here**
-> 3. Name it (e.g., `HR_SecurityBaseline`)
-> 4. Right-click the new GPO → **Edit**
-> 5. Navigate to `Computer Configuration > Policies > Windows Settings > Security Settings` to configure account and audit policies
-> 6. On a domain client, run `gpupdate /force` then `gpresult /r` to verify the policy was applied
-
 ---
 
 ### Phase 8 – Hardening & Security Baselines *(Planned)*
@@ -305,13 +297,6 @@ Share permissions and NTFS permissions are independent layers. The most restrict
 - Disable legacy protocols (e.g., NTLMv1, SMBv1)
 - Introduce intentional misconfigurations to practice diagnosis and remediation
 - Document attack surfaces and hardening decisions with reasoning
-
-> **Steps to Implement (SMBv1 Disable Example):**
-> 1. On DC01, open **PowerShell as Administrator**
-> 2. Check current state: `Get-SmbServerConfiguration | Select EnableSMB1Protocol`
-> 3. Disable SMBv1: `Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force`
-> 4. Verify: `Get-SmbServerConfiguration | Select EnableSMB1Protocol`
-> 5. Document the change and test that domain-joined clients can still access shares
 
 ---
 
